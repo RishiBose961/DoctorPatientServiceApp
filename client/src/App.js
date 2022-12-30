@@ -4,7 +4,7 @@ import Authentication from './pages/Authentication'
 
 function App() {
   return (
-    <div>
+    <div className="bg-bgprimary flex">
       <Routes>
         <Route path="/" element={<Authentication />}/>
       </Routes>
