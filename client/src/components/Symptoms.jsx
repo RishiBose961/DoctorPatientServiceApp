@@ -1,6 +1,6 @@
 import React, {Component } from 'react';
 
-var apimedicurl = 'https://sandbox-healthservice.priaid.ch/symptoms?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InBpcGlyb3kwM0BnbWFpbC5jb20iLCJyb2xlIjoiVXNlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3NpZCI6IjExNjA3IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy92ZXJzaW9uIjoiMjAwIiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9saW1pdCI6Ijk5OTk5OTk5OSIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbWVtYmVyc2hpcCI6IlByZW1pdW0iLCJodHRwOi8vZXhhbXBsZS5vcmcvY2xhaW1zL2xhbmd1YWdlIjoiZW4tZ2IiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIyMDk5LTEyLTMxIiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9tZW1iZXJzaGlwc3RhcnQiOiIyMDIyLTEyLTI5IiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94LWF1dGhzZXJ2aWNlLnByaWFpZC5jaCIsImF1ZCI6Imh0dHBzOi8vaGVhbHRoc2VydmljZS5wcmlhaWQuY2giLCJleHAiOjE2NzIzOTM1NTUsIm5iZiI6MTY3MjM4NjM1NX0.v3x3KwjJ68W3bz5XbnT6k9FdOeSK31Av0gncX_qAn2E&format=json&language=en-gb';
+var apimedicurl = 'https://sandbox-healthservice.priaid.ch/symptoms?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InBpcGlyb3kwM0BnbWFpbC5jb20iLCJyb2xlIjoiVXNlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3NpZCI6IjExNjA3IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy92ZXJzaW9uIjoiMjAwIiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9saW1pdCI6Ijk5OTk5OTk5OSIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbWVtYmVyc2hpcCI6IlByZW1pdW0iLCJodHRwOi8vZXhhbXBsZS5vcmcvY2xhaW1zL2xhbmd1YWdlIjoiZW4tZ2IiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIyMDk5LTEyLTMxIiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9tZW1iZXJzaGlwc3RhcnQiOiIyMDIyLTEyLTI5IiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94LWF1dGhzZXJ2aWNlLnByaWFpZC5jaCIsImF1ZCI6Imh0dHBzOi8vaGVhbHRoc2VydmljZS5wcmlhaWQuY2giLCJleHAiOjE2NzI0MDg5MjcsIm5iZiI6MTY3MjQwMTcyN30.-IDBGTY4CV3S3c4owKY3vqhTtinNNMngYKBKOw-_9Ac&format=json&language=en-gb';
 
 class Symptoms extends Component {
 
@@ -70,12 +70,15 @@ class Symptoms extends Component {
   
     render(){
       return (
-        <form onSubmit={this.handleSubmit}>
-  
+        <div>
+          <br></br><br></br><br></br><br></br><br></br>
+        <div className="flex justify-center items-center bg-white flex flex-col justify-items-center items-center py-4 px-4 rounded shadow-md my-7 ml-auto w-full">
+          <form onSubmit={this.handleSubmit}>
+                <label for="countries" class="block mb-2 text-xl font-medium text-gray-900 py-3">What's your symptom</label>
                 <select 
                   value={this.state.value} 
                   onChange={this.handleChange}
-                  className="form-select" 
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" 
                   id="symptoms" 
                   name="body" 
                   aria-label="Default select example" >
@@ -86,9 +89,16 @@ class Symptoms extends Component {
                     ))
                   }
                 </select>
-                <button type="submit">Submit</button>
-  
-        </form>
+                <button type='submit' className="text-lg mt-10  bg-primary py-1 px-3 rounded font-semibold font-poppins shadow-sm hover:bg-bgsecondary">Proceed</button>
+                  
+          </form>
+        </div>
+        <br></br><br></br><br></br><br></br><br></br><br></br>
+        </div>
+
+        /*<div className="bg-sky-500 h-screen flex justify-center items-center">
+          <div className="bg-red-500 w-32 h-32 border"> hi </div>
+        </div>*/
       )
     }
   }
