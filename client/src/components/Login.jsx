@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import profile from '../assets/profile.png'
@@ -45,7 +46,6 @@ const Login = () => {
       errors()
     }
   }
-
 
   return (
     <div lassName="bg-white flex flex-col justify-items-center items-center py-4 px-4 rounded shadow-md lg:w-3/4 w-full my-7 ml-auto ">

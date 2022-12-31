@@ -1,3 +1,4 @@
+
 import React, { useContext, useEffect } from 'react'
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import { AuthContext } from '../context/AuthContext';
@@ -101,7 +102,6 @@ const Community = () => {
       <div class="...">
         <Profile/>
       </div>
-
 
     </div>
   )
